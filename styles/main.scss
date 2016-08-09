@@ -1,0 +1,29 @@
+header {
+  img {
+    width: 10%;
+  }
+  button {
+    background-color: #3CB1CB;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+#etsy-images {
+  background-color: #F5F5F1;
+  img {
+    width: 30%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 10px;
+  }
+}
+
+footer {
+  border-top: 1px solid gray;
+  text-align: center;
+  background-color: #F5F5F1;
+  p {
+    font-weight: bold;
+  }
+}
