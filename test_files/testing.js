@@ -25,9 +25,9 @@
                     dataType: 'jsonp',
 
                     success: function(brian){
-                      console.log(brian);
+                      //console.log(brian);
                       var userData = brian.results.map((user) => user.login_name);
-                      console.log(userData);
+                      //console.log(userData);
 
                       var itemData = data.results.map((item, index) => `<div class="item">
                       <a href="${item.url}"><img src="${item.Images[0].url_170x135}" alt="" /></a>
