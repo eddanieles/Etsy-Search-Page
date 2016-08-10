@@ -24,15 +24,15 @@
                     url: `https://openapi.etsy.com/v2/users/${users}.js?api_key=kblh8c5ktm9s8x1qv5o95yyz`,
                     dataType: 'jsonp',
 
-                    success: function(brian){
-                      //console.log(brian);
-                      var userData = brian.results.map((user) => user.login_name);
+                    success: function(userData){
                       //console.log(userData);
+                      var loginArray = userData.results.map((user) => user.login_name);
+                      //console.log(loginArray);
 
                       var itemData = data.results.map((item, index) => `<div class="item">
                       <a href="${item.url}"><img src="${item.Images[0].url_170x135}" alt="" /></a>
                       <p><span>${item.title}</span></p>
-                      <p>User: ${userData[index]}<span class="price">${parseFloat(item.price).toLocaleString('us-EN', { style: 'currency', currency: 'USD' })}</span></p>
+                      <p>User: ${loginArray[index]}<span class="price">${parseFloat(item.price).toLocaleString('us-EN', { style: 'currency', currency: 'USD' })}</span></p>
                       <div>`);
                       $("#etsy-images").html(itemData);
                     }
