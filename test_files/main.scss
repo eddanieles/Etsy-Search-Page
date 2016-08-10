@@ -1,0 +1,33 @@
+header {
+  #nav {
+    position: relative;
+    top: -45px;
+    button {
+      background-color: #3CB1CB;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
+
+#etsy-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item {
+  width: 30%;
+  border: 1px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  img {
+    //margin: auto;
+    //display: block;
+    width: 100%;
+  }
+  .price {
+    float: right;
+    color: limegreen;
+  }
+}

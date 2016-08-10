@@ -14,9 +14,10 @@
                 url: etsyURL,
                 dataType: 'jsonp',
                 success: function(data) {
+                  console.log(data);
                     if (data.ok) {
                         $('#etsy-images').empty();
-                        $('<p>Results for "'+ terms +'"</p>').appendTo('#etsy-images');
+                        $('<p>Search results for "'+ terms +'":</p>').appendTo('#etsy-images');
                         if (data.count > 0) {
                             $.each(data.results, function(i,item) {
                                 $("<img/>").attr("src", item.Images[0].url_75x75).appendTo("#etsy-images").wrap(
